@@ -1,3 +1,18 @@
+#Design
+
+By default, I wanted all of the dog options to show on the screen. When you click on one of the attribute buttons on the top, you should be able to filter the results by desired traits. You should be able to search by multiple traits or multiple values listed under the same trait, like "Characteristics" or "Common Health Problems”.  I started by asking chat-GPT for a way generate a button by clicking on the attributes that I had listed in AttributesSelector. Once I adjusted this to my needs and got it working, I moved the useState to the main App.js file. To start, I was keeping “searchTerm” and “selectedAttribute” as props in state to be passed down from this parent file. They were saved as strings (This would cause a headache for me later) while I tried to get the first search working.
+
+Next, I started creating the SearchResults file. I chose to return the tiles by using a map to iterate through each object to generate a tile or “box-container”. Then, above, I created a filter that took arguments of “selectedAttribute and searchTerms”. These converted the input from the search bar to lower case as well as the “attribute data”. For now, the first search was working but I had a big issue when I loaded up the page the second time. I kept receiving an error that .toLowerCase() was unable to read an empty state (this is likely not 100% correct. I forgot what the error exactly was). I filled in the states with a data point for the time being and that seemed to fix the issue. 
+
+From here, I needed to find a way to keep arrays in state so that I could have multiple search bars filtering each key at the same time (our “AND” operator). This is where things got tricky for me. I update my App.js file to pass on arrays instead of strings which meant I would get an error if I clicked on more than one button now (I still has “default” values in my useState).  
+
+In the AttributeSelector, I added a spread operator with an empty string on the end of it. This allowed me to include additional inputs whenever an attribute button was clicked. Below that, I edited my handleSearchTermOnChange function to take two arguments, an input change event and the index of the input being changed. I used another spread operator along with a slice method to iterate through the elements for searchTerms and replace its value at the specified index with a new value entered by the user.
+
+But, I still had one problem, I was still getting errors every time I clicked more than one button. After staring at my code for a lot longer than I care to admit and searching the web for fixes, I knew that It needed a value to display the tiles but was unsure of what to use. I tried adding a “true” value to the end of the code and that seemed to fix the issue. It turns out, I didn’t need to pass down the value to load the page, I just needed my filteredData value to not return false.
+
+I had a lot of fun working on this assignment and learning about javascript/frontend!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

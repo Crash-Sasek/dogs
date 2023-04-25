@@ -24,12 +24,14 @@ function AttributeSelector({selectedAttributes, searchTerms, setSelectedAttribut
 
   return (
     <div>
-      <h3>Select Attributes:</h3>
+      <h2>Select the Attributes of Your Perfect Doggo:</h2>
       <ul>
         {attributes.map((attribute) => (
+          <div className="btn btn-primary">
           <li key={attribute} onClick={() => handleAttributeClick(attribute)}>
             {attribute}
           </li>
+          </div>
         ))}
       </ul>
       {selectedAttributes.length > 0 && (

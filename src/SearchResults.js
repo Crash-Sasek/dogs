@@ -13,7 +13,7 @@ function SearchResults({selectedAttributes, searchTerms}) {
       <div className="box-container">
         {filteredData.map((d, i) => {
           return (
-            <div className="box" key={i} style={{ backgroundColor: "#4DBA87" }}>
+            <div className="box" key={i} style={{ backgroundColor: "#6ABE8E" }}>
               <b>Breed: </b>
               {d.breed}
               <br />

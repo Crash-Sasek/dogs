@@ -14,12 +14,6 @@ But, I still had one problem, I was still getting errors every time I clicked mo
 
 I had a lot of fun working on this assignment and learning about javascript/frontend!
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 689fffd (Removed the bullets from the Attribute select buttons and autofocused the search bars on generation.)
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

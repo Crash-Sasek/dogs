@@ -25,7 +25,7 @@ function AttributeSelector({selectedAttributes, searchTerms, setSelectedAttribut
   return (
     <div>
       <h2>Select the Attributes of Your Perfect Doggo:</h2>
-      <ul>
+      <ul class="nobull">
         {attributes.map((attribute) => (
           <div className="btn btn-primary">
           <li key={attribute} onClick={() => handleAttributeClick(attribute)}>
@@ -41,7 +41,7 @@ function AttributeSelector({selectedAttributes, searchTerms, setSelectedAttribut
           return (
             <div>
               {attribute}
-              <input type="text" placeholder="Attribute..." value={searchTerms[index]} onChange={ (e) => handleSearchTermOnChange(e, index) } />
+              <input type="text" autoFocus placeholder="Attribute..." value={searchTerms[index]} onChange={ (e) => handleSearchTermOnChange(e, index) } />
             </div>
           )
         })}

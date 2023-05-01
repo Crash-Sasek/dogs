@@ -32,12 +32,16 @@ code {
 }
 
 .attributelist {
-  width: 100px;
+  width: 150px;
   height: 200px;
-  margin: 10px;
-  padding: 10px;
-  line-height: 20px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 30px;
   float: middle;
   border-radius: 4px;
   border: 1px solid #999;
+}
+
+.nobull {
+  list-style-type: none;
 }
